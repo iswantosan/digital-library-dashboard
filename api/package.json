@@ -13,7 +13,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fastify/swagger": "^9.4.2",
+    "@fastify/autoload": "^6.1.0",
+    "@fastify/cors": "^10.0.2",
+    "@fastify/jwt": "^9.0.3",
     "@prisma/client": "^6.3.0",
     "bcrypt": "^5.1.1",
     "fastify": "^5.2.1",
@@ -22,6 +24,7 @@
     "fastify-swagger": "^5.2.0"
   },
   "devDependencies": {
+    "@fastify/swagger": "^9.4.2",
     "@types/bcrypt": "^5.0.2",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.13.0",
