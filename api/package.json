@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node src/app.js",
-    "start": "node src/app.js",
-    "seed": "node prisma/seeds/seed.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "dev": "ts-node src/app.ts",
+    "start": "node dist/app.js",
+    "seed": "ts-node prisma/seeds/seed.ts"
   },
   "keywords": [],
   "author": "",
