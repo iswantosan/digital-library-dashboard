@@ -7,6 +7,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  password String
+  lendings Lending[]
+}
+
+
 model Book {
   id        Int    @id @default(autoincrement())
   title     String
@@ -20,9 +28,10 @@ model Book {
 model Lending {
   id         Int      @id @default(autoincrement())
   bookId     Int
-  borrower   String
+  userId     Int
   borrowDate DateTime @default(now())
   returnDate DateTime?
 
   book       Book @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  user       User @relation(fields: [userId], references: [id], onDelete: Cascade) // 👈 Add user relation
 }
